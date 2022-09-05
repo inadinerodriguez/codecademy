@@ -6,7 +6,7 @@ const vowels = ["a", "e", "i", "o", "u"];
 const resultArray = [];
 
 for (let indexInput = 0; indexInput < input.length; indexInput++) {
-  //console.log(`input index is ${idexInput}`);
+  //console.log(`input index is ${indexInput}`);
   if(input[indexInput] === "e") {
     resultArray.push(input[indexInput]);
   }
