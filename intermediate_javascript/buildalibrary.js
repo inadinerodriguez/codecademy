@@ -49,7 +49,7 @@ class School {
   }
   
   class Middle extends School {
-    constructor(name, level, numOfStudents) {
+    constructor(name, numOfStudents) {
       super(name, "middle", numOfStudents);
     }
   }
