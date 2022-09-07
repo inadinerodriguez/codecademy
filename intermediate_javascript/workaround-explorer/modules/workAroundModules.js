@@ -1,6 +1,6 @@
 // Add your imports here.
-import { getDataByRole, getDataByCompany } from '../modules/salaryData';
-import { default as salaryData } from '../modules/salaryData';
+import { getDataByRole, getDataByCompany } from '../modules/salaryData.js';
+import salaryData from '../modules/salaryData.js';
 
 // Replace the empty array with the appropriate imported function/value
 const getAverageSalaryByRole = role => {
@@ -38,5 +38,10 @@ function calculateAverage(arrayOfNumbers) {
   return (total / arrayOfNumbers.length).toFixed(2);
 }
 
-export { getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary };
+export { 
+    getAverageSalaryByRole, 
+    getAverageSalaryByCompany, 
+    getSalaryAtCompany, 
+    getIndustryAverageSalary, 
+};
 

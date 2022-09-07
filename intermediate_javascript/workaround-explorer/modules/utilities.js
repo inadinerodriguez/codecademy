@@ -11,4 +11,4 @@ const formatNumber = number => {
     return numStr;
 }
 
-export { formatNumber };
+export default formatNumber;

@@ -2,7 +2,7 @@ import { getRoles, getCompanies,  } from '../workaround-explorer/modules/salaryD
 
 import { getAverageSalaryByRole, getAverageSalaryByCompany, getSalaryAtCompany, getIndustryAverageSalary } from '../workaround-explorer/modules/workAroundModules.js';
 
-import { formatNumber } from '../workaround-explorer/modules/utilities.js';
+import formatNumber from '../workaround-explorer/modules/utilities.js';
 
 // TODO: Get the companies and roles using the salaryData module.
 const companies = getCompanies();
@@ -57,10 +57,10 @@ function updateResults(){
   if (!company || !role) { return; }
 
   // TODO: Use the workAroundModule functions to calculate the needed data.
-  const averageSalaryByRole = getAverageSalaryByRole(role);
-  const averageSalaryByCompany = getAverageSalaryByCompany(company);
-  const salary = getSalaryAtCompany(role, company);
-  const industryAverageSalary = getIndustryAverageSalary();
+  const averageSalaryByRole = formatNumber(getAverageSalaryByRole(role));
+  const averageSalaryByCompany = formatNumber(getAverageSalaryByCompany(company));
+  const salary = formatNumber(getSalaryAtCompany(role, company));
+  const industryAverageSalary = formatNumber(getIndustryAverageSalary());
 
   // Render them to the screen.
   document.getElementById('salarySelected').innerText = `The salary for ${role}s at ${company} is \$${salary}`;
@@ -68,5 +68,3 @@ function updateResults(){
   document.getElementById('salaryAverageByCompany').innerText = `The average salary at ${company} is \$${averageSalaryByCompany}`;
   document.getElementById('salaryAverageIndustry').innerText = `The average salary in the Tech industry is \$${industryAverageSalary}`;
 }
-
-const result = formatNumber(1234567.89);
