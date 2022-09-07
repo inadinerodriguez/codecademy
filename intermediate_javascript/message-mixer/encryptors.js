@@ -63,7 +63,7 @@ const caesarCipher = (str, amount = 0) => {
   // module.exports.symbolCipher = symbolCipher;
   // module.exports.reverseCipher = reverseCipher;
   
-  module.exports = {
+  export default {
       caesarCipher,
       symbolCipher,
       reverseCipher

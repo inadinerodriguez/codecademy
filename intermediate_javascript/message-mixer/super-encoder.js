@@ -1,8 +1,4 @@
-const {
-    ceasarCipher,
-    symbolCipher,
-    reverseCiphor,
-  } = require("./encryptors.js");
+import { ceasarCipher, symbolCipher, reverseCipher } from "./encryptors";
   
   const randAmount = 5;
   

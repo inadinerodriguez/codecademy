@@ -1,4 +1,4 @@
-const { caesarCipher, symbolCipher, reverseCipher } = require('./encryptors.js');
+import { caesarCipher, symbolCipher, reverseCipher } from '..encryptors';
 
 
 // User Input / Output Logic
